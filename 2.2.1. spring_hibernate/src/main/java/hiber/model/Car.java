@@ -1,5 +1,6 @@
 package hiber.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -16,7 +17,6 @@ public class Car {
     private String model;
     @Column(name = "series")
     private int series;
-
     public Car() {
     }
 

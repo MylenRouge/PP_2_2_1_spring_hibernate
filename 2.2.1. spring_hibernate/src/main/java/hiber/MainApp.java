@@ -21,20 +21,16 @@ public class MainApp {
       Car car2 = new Car("honda", 2);
       Car car3 = new Car("tesla", 3);
 
-      User user1 = new User("User1", "Lastname1", "user1@gmail.com");
-      User user2 = new User("User2", "Lastname2", "user2@gmail.com");
-      User user3 = new User("User3", "Lastname3", "user3@gmail.com");
-
-      user1.setCar(car1);
-      user2.setCar(car2);
-      user3.setCar(car3);
+      User user1 = new User("User1", "Lastname1", "user1@gmail.com", car1);
+      User user2 = new User("User2", "Lastname2", "user2@gmail.com", car2);
+      User user3 = new User("User3", "Lastname3", "user3@gmail.com", car3);
 
       userService.add(user1);
       userService.add(user2);
       userService.add(user3);
 
 
-      List<User> users = userService.listUsers();
+      List<User> users = userService.getListUsers();
       for (User user : users) {
          System.out.println("Id = "+user.getId());
          System.out.println("First Name = "+user.getFirstName());
