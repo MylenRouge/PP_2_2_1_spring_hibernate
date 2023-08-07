@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.*;
 import java.util.Objects;
 
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -28,6 +29,7 @@ public class User {
 
     public User() {
     }
+
     public User(String firstName, String lastName, String email, Car car) {
         this.firstName = firstName;
         this.lastName = lastName;
